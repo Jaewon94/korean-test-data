@@ -1,0 +1,24 @@
+debug: false # 디버그 모드 비활성화
+
+logging:
+  level:
+    com.fastcampus.korean_test_data: DEBUG    # 프로젝트 패키지의 로그 레벨 설정
+    org.springframework.web.servlet: DEBUG     # 스프링 웹 서블릿 로그 레벨 설정
+
+spring:
+  application:
+    name: korean-test-data    # 애플리케이션 이름 설정
+    
+  jpa:
+    open-in-view: false       # OSIV 비활성화 - 성능 최적화
+    defer-datasource-initialization: true      # DB 초기화 지연 설정
+    hibernate:
+      ddl-auto: create        # DB 스키마 자동 생성 (create/update/none)
+    show-sql: true           # SQL 쿼리 콘솔 출력 
+    properties:
+      hibernate:
+        format_sql: true     # SQL 쿼리 포맷팅하여 보기 좋게 출력
+        
+  sql:
+    init:
+      mode: always           # SQL 초기화 스크립트 항상 실행
